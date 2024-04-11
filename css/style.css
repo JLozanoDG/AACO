@@ -26,7 +26,6 @@ body{
     font-family: var(--font-base);
     line-height: 1.7;
     color: var(--c-black);
-    font-family
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -42,10 +41,150 @@ a {
 
 img {
     max-width: 100%;
-    height: auto;
 }
+
+/*--------------------------------------  NAVBAR --------------------------*/
 
 .section-padding {
     padding-top: 140px;
     padding-bottom: 140px;
 }
+
+.circlebutton {
+    border-radius: 50%;
+    background-color: var(--c-metalic-green);
+    width: 35px;
+    height: 35px;
+    margin: auto;
+}
+
+
+#lowerpartbrand {
+    display: none;
+}
+
+#searchbarcontainer {
+    padding: 10px 0px;
+    border-bottom: 2px solid var(--c-black);
+    width: 95%;
+}
+
+#logincontainer {
+    margin: auto;
+    padding: 0 20px 0 40px;
+}
+
+.logoaaco {
+    height:60px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.logounal {
+    height:70px;
+}
+
+#divisor {
+    height:70px;
+    width:1px;
+    border-left: 2px solid var(--c-black);
+    padding-right: 15px;
+}
+
+#navbarcontainer {
+    width: 90%;
+}
+
+.navbaritem{
+    background-color: var(--c-metalic-green);
+    margin: auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    
+}
+
+.activenavbar {
+    background-color: var(--c-kelly-green);
+}
+.navbaritem:hover {
+    background-color: var(--c-kelly-green);
+}
+.navbaritem p {
+    color: var(--c-white);
+    font-weight: var(--f-medium);
+    font-size: 16px;
+}
+
+
+/*--------------------------------------  HERO --------------------------*/
+
+.btn-apply {
+    background-color: var(--c-metalic-green);
+    color: var(--c-white);
+    font-weight: var(--f-bold);
+    padding: 10px 48px;
+    border-radius: 20px;
+}
+
+#hero {
+    height: 75vh;
+}
+
+
+
+
+@media only screen and (max-width: 992px){
+
+    #searchbar {
+        display: none;
+    }
+
+    #navbarcontainer {
+        padding: 10px 0px;
+        border-bottom: 2px solid var(--c-black);
+    }
+    #lowerpartbrand {
+        display: inherit;
+    }
+
+    .logoaaco {
+        padding-left: 0px;
+    }
+
+    .navbaritem{
+        background-color: transparent;
+        margin: inherit;
+        border-radius: 0px;
+        box-sizing: content-box;
+        padding: 0 0px;
+        
+    }
+    
+    .navbaritem p {
+        color: var(--c-black);
+        font-weight: var(--f-medium);
+        margin-bottom: 0;
+    }
+
+    #herotitle {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1072px) and (max-width: 1218px){
+    .navbaritem p {
+        color: var(--c-white);
+        font-weight: var(--f-medium);
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1071px){
+    .navbaritem p {
+        color: var(--c-white);
+        font-weight: var(--f-medium);
+        font-size: 12px;
+    }
+}
+

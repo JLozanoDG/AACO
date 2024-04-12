@@ -47,11 +47,26 @@ img {
 .round-box {
     border-radius: 20px;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
 }
 
+.green-box {
+    background-color: var(--c-metalic-green);
+}
+
+.round-box-container {
+    width: 90%;
+    margin: auto;
+}
+.round-box-p {
+    margin: auto;
+    vertical-align: middle;
+    font-size: var(--f-regular);
+} 
+
 .round-box-title {
-    padding: 40px 0px 0px 40px;
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
 .white-text {
@@ -62,12 +77,23 @@ img {
     color: var(--c-metalic-green);
 }
 
-/*--------------------------------------  NAVBAR --------------------------*/
+.button {
+    color: var(--c-white);
+    font-weight: var(--f-bold);
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+.green-button {
+    background-color: var(--c-kelly-green);
+}
 
 .section-padding {
     padding-top: 140px;
     padding-bottom: 140px;
 }
+
+/*--------------------------------------  NAVBAR --------------------------*/
 
 .circlebutton {
     border-radius: 50%;
@@ -85,6 +111,12 @@ img {
     border-radius: 20px;
     margin-right: 5px;
 }
+
+.nav-button:hover {
+    background-color: var(--c-kelly-green);
+    color: var(--c-white);
+}
+
 #lowerpartbrand {
     display: none;
 }
@@ -151,11 +183,14 @@ img {
 
 
 .btn-apply {
-    background-color: var(--c-metalic-green);
     color: var(--c-white);
     font-weight: var(--f-bold);
     padding: 10px 48px;
     border-radius: 20px;
+}
+
+.btn-apply:hover {
+    background-color: var(--c-metalic-green);
 }
 
 #btn-apply-container {
@@ -168,7 +203,7 @@ img {
 
 #lookfurther{
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
@@ -176,6 +211,9 @@ img {
     font-weight: var(--f-bold);
 }
 
+#lookfurther-btn:hover {
+    color: var(--c-metalic-green);
+}
 #lookfurther-btn {
     color: var(--c-kelly-green);
 }
@@ -200,12 +238,48 @@ img {
     background-color: var(--c-white);
 }
 
+
+/*--------------------------------------  RESPONSIVE --------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    #herotitle {
+        text-align: center;
+    }
+
+    .nav-button {
+        font-size: 14px;
+    }
+
+    .round-box {
+        height: 60vh;
+    }
+
+    #btn-apply-container {
+        padding-top: 0px;
+    }
+    
+
+
+}
+
+
 @media only screen and (max-width: 992px){
 
     #navbar {
-        background-color: rgba(245, 247, 242, 0.7);
+        background-color: rgb(245, 247, 242);
     }
 
+    .nav-button {
+        background-color: transparent;
+        color: var(--c-black);
+        border-radius: 0;
+    }
+
+    .nav-button:hover {
+        background-color: var(--c-kelly-green);
+        color: var(--c-white);
+    }
     #hero {
         height: 85vh;
     }
@@ -248,27 +322,15 @@ img {
     #herotitle {
         text-align: center;
     }
-}
 
-@media only screen and (min-width: 1072px) and (max-width: 1218px){
-    .navbaritem p {
-        color: var(--c-white);
-        font-weight: var(--f-medium);
-        font-size: 14px;
+    .round-box {
+        border-radius: 20px;
+        width: 100%;
+        height: 40vh;
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1071px){
-    .navbaritem p {
-        color: var(--c-white);
-        font-weight: var(--f-medium);
-        font-size: 12px;
-    }
 
-    #herotitle {
-        text-align: center;
-    }
-}
 
 @media only screen and (max-width: 425px){
     .logoaaco {

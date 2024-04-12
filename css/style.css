@@ -31,18 +31,35 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4. .h5, .h6 {
+.h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: var(--f-medium);
 }
 
 a {
     transition: var(--transition);
     text-decoration: none;
-    color: var(--c-white);
 }
 
 img {
     max-width: 100%;
+}
+
+.round-box {
+    border-radius: 20px;
+    width: 100%;
+    height: 60vh;
+}
+
+.round-box-title {
+    padding: 40px 0px 0px 40px;
+}
+
+.white-text {
+    color: var(--c-white);
+}
+
+.green-text {
+    color: var(--c-metalic-green);
 }
 
 /*--------------------------------------  NAVBAR --------------------------*/
@@ -60,7 +77,14 @@ img {
     margin: auto;
 }
 
-
+.nav-button {
+    background-color: var(--c-metalic-green);
+    color: var(--c-white);
+    font-weight: var(--f-medium);
+    padding: 5px 5px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
 #lowerpartbrand {
     display: none;
 }
@@ -97,6 +121,10 @@ img {
     width: 90%;
 }
 
+#navbar {
+    background-color: transparent;
+}
+
 .navbaritem{
     background-color: var(--c-metalic-green);
     margin: auto;
@@ -121,6 +149,7 @@ img {
 
 /*--------------------------------------  HERO --------------------------*/
 
+
 .btn-apply {
     background-color: var(--c-metalic-green);
     color: var(--c-white);
@@ -134,7 +163,7 @@ img {
 }
 
 #hero {
-    height: 85vh;
+    height: 75vh;
 }
 
 #lookfurther{
@@ -147,6 +176,10 @@ img {
     font-weight: var(--f-bold);
 }
 
+#lookfurther-btn {
+    color: var(--c-kelly-green);
+}
+
 .arrow-down {
     width: 0; 
     height: 0; 
@@ -154,10 +187,28 @@ img {
     border-right: 20px solid transparent;
     border-top: 20px solid var(--c-kelly-green);
     margin: auto;
-  }
+}
 
+
+
+/*--------------------------------------  ABOUT --------------------------*/
+#aboutcontainer {
+    background-color: var(--c-metalic-green);
+}
+
+#gallerycontainer {
+    background-color: var(--c-white);
+}
 
 @media only screen and (max-width: 992px){
+
+    #navbar {
+        background-color: rgba(245, 247, 242, 0.7);
+    }
+
+    #hero {
+        height: 85vh;
+    }
 
     #lookfurther{
         bottom: 0%;

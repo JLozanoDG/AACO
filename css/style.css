@@ -50,18 +50,24 @@ img {
     height: 50vh;
 }
 
+.round-corners {
+    border-radius: 20px;
+}
 .green-box {
     background-color: var(--c-metalic-green);
 }
 
+.white-box {
+    background-color: var(--c-white);
+}
 .round-box-container {
     width: 90%;
     margin: auto;
 }
 .round-box-p {
-    margin: auto;
-    vertical-align: middle;
     font-size: var(--f-regular);
+    padding-bottom: 10px;
+
 } 
 
 .round-box-title {
@@ -73,6 +79,9 @@ img {
     color: var(--c-white);
 }
 
+.black-text {
+    color: var(--c-black);
+}
 .green-text {
     color: var(--c-metalic-green);
 }
@@ -80,7 +89,7 @@ img {
 .button {
     color: var(--c-white);
     font-weight: var(--f-bold);
-    padding: 10px 10px;
+    padding: 10px 15px;
     border-radius: 20px;
 }
 
@@ -98,8 +107,7 @@ img {
 .circlebutton {
     border-radius: 50%;
     background-color: var(--c-metalic-green);
-    width: 35px;
-    height: 35px;
+    padding: 10px;
     margin: auto;
 }
 
@@ -116,6 +124,7 @@ img {
     background-color: var(--c-kelly-green);
     color: var(--c-white);
 }
+
 
 #lowerpartbrand {
     display: none;
@@ -227,6 +236,10 @@ img {
     margin: auto;
 }
 
+.arrow-down:hover {
+    border-top: 20px solid var(--c-metalic-green);
+}
+
 
 
 /*--------------------------------------  ABOUT --------------------------*/
@@ -258,9 +271,6 @@ img {
     #btn-apply-container {
         padding-top: 0px;
     }
-    
-
-
 }
 
 
@@ -282,6 +292,10 @@ img {
     }
     #hero {
         height: 85vh;
+    }
+
+    #about {
+        height: 105vh;
     }
 
     #lookfurther{
@@ -328,11 +342,15 @@ img {
         width: 100%;
         height: 40vh;
     }
+
+    .green-box {
+        margin-bottom: 20px;
+    }
 }
 
 
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 430px){
     .logoaaco {
         height:40px;
         padding-left: 0px;
@@ -345,6 +363,24 @@ img {
     
     #divisor {
         height:40px;
+    }
+
+    .round-box-title {
+        font-size: 1.2em;
+    }
+    
+    .round-box-p {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .round-box-title {
+        font-size: 1em;
+    }
+    
+    .round-box-p {
+        font-size: 0.6em;
     }
 }
 

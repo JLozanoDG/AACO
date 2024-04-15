@@ -256,6 +256,14 @@ img {
 }
 
 
+/*------------------------------------- NEWS ------------------------------*/
+#newsbutton {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+
 /*--------------------------------------  RESPONSIVE --------------------------*/
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -349,6 +357,14 @@ img {
 
     .green-box {
         margin-bottom: 20px;
+    }
+
+    #newsbutton {
+        transform: translate(-50%,-50%);
+        top: 0%;
+        left: 50%;
+        margin-top: 40px;
+        text-align: center;
     }
 }
 

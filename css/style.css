@@ -269,6 +269,10 @@ img {
     right: 0%;
 }
 
+.bottom-news {
+    margin-top: 15px;
+}
+
 /*------------------------------------- FOUNDER ------------------------------*/
 
 #founderphoto {
@@ -290,6 +294,22 @@ img {
 #foundertitle {
     font-size: 1.3em;
 }
+/*------------------------------------- PUBLICATIONS ------------------------------*/
+
+.publication-title {
+
+}
+
+.publication-number {
+    font-size: 3.5em;
+    font-weight: var(--f-bold);
+    text-align: right;
+}
+
+.publication-title {
+    font-weight: var(--f-medium);
+    text-align: left;
+}
 
 /*--------------------------------------  RESPONSIVE --------------------------*/
 
@@ -310,11 +330,21 @@ img {
     #btn-apply-container {
         padding-top: 0px;
     }
+    
 }
 
 
 @media only screen and (max-width: 992px){
 
+    .bottom-news {
+        margin-top: 0px;
+    }
+
+    .publication-image {
+        width: 50%;
+        margin-top: 10px;
+    }
+    
     #navbar {
         background-color: rgb(245, 247, 242);
     }
@@ -332,7 +362,6 @@ img {
     #hero {
         height: 85vh;
     }
-
     #about {
         height: 105vh;
     }

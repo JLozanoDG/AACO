@@ -274,6 +274,21 @@ img {
 #founderphoto {
     border-radius: 50%;
     padding: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+#founderinfo {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#foundername {
+    font-weight: var(--f-bold); 
+}
+
+#foundertitle {
+    font-size: 1.3em;
 }
 
 /*--------------------------------------  RESPONSIVE --------------------------*/
@@ -384,8 +399,13 @@ img {
     }
 
     #founderphoto {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+    }
+
+    #foundertitle {
+        width: 90%;
+        font-size: 1.2em;
     }
 }
 

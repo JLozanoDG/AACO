@@ -269,6 +269,12 @@ img {
     right: 0%;
 }
 
+/*------------------------------------- FOUNDER ------------------------------*/
+
+#founderphoto {
+    border-radius: 50%;
+    padding: 10px;
+}
 
 /*--------------------------------------  RESPONSIVE --------------------------*/
 
@@ -374,7 +380,12 @@ img {
     }
 
     .round-news {
-        margin-top: 60px;
+        margin-top: 10px;
+    }
+
+    #founderphoto {
+        width: 300px;
+        height: 300px;
     }
 }
 

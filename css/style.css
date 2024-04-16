@@ -8,7 +8,7 @@
     --c-metalic-green: #3B7B02;
     --c-kelly-green: #65A603;
     --c-olivine: #9BBF65;
-    --c-sherwood-green: #65A603;
+    --c-sherwood-green: #014034;
     --c-soft-green: #73BF8E;
     --c-black: #252525;
     --c-white: #F5F7F2;
@@ -54,6 +54,13 @@ img {
     height: 50vh;
 }
 
+.footer-color {
+    background-color: var(--c-sherwood-green);
+}
+
+.light-green-box {
+    background-color: var(--c-kelly-green);
+}
 .round-corners {
     border-radius: 20px;
 }
@@ -311,6 +318,19 @@ img {
     text-align: left;
 }
 
+/*------------------------------------- BENEFITS ------------------------------*/
+
+#benefitscontainer {
+    background-image: url(../images/benefits.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+}
+
+#benefitstitle {
+    font-weight: var(--f-bold);
+}
+
 /*--------------------------------------  RESPONSIVE --------------------------*/
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -329,6 +349,11 @@ img {
 
     #btn-apply-container {
         padding-top: 0px;
+    }
+
+    #founderphoto {
+        width: 200px;
+        height: 200px;
     }
     
 }

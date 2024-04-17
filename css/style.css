@@ -157,7 +157,7 @@ img {
     width: 95%;
 }
 
-#logincontainer {
+.logincontainer {
     margin: auto;
     padding: 0 20px 0 40px;
 }
@@ -206,6 +206,10 @@ img {
     color: var(--c-white);
     font-weight: var(--f-medium);
     font-size: 16px;
+}
+
+.nav-login {
+    display: none;
 }
 
 
@@ -395,9 +399,16 @@ img {
         margin-top: 0px;
     }
 
+    .logincontainer {
+        padding: 0;
+    }
     .publication-image {
         width: 50%;
         margin-top: 10px;
+    }
+
+    .nav-login {
+        display: inline-block;
     }
     
     #navbar {
@@ -512,15 +523,15 @@ img {
 
 
 
-@media only screen and (max-width: 430px){
+@media only screen and (max-width: 540px){
     .logoaaco {
-        height:40px;
+        height: 30px;
         padding-left: 0px;
-        padding-right: 20px;
+        padding-right: 15px;
     }
     
     .logounal {
-        height:50px;
+        height:40px;
     }
     
     #divisor {
@@ -540,7 +551,15 @@ img {
     .round-box-title {
         font-size: 1em;
     }
+    .logounal {
+        display: none;
+    }
     
+    #divisor {
+        height:40px;
+        display: none;
+    }
+
     .round-box-p {
         font-size: 0.6em;
     }

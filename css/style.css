@@ -51,7 +51,7 @@ img {
 .round-box {
     border-radius: 20px;
     width: 100%;
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .footer-color {
@@ -95,6 +95,10 @@ img {
 }
 .green-text {
     color: var(--c-metalic-green);
+}
+
+.light-green-text {
+    color: var(--c-kelly-green);
 }
 
 .button {
@@ -331,6 +335,32 @@ img {
     font-weight: var(--f-bold);
 }
 
+/*------------------------------------- FOOTER ------------------------------*/
+
+#followus {
+    font-weight: var(--f-bold);
+    margin-right: 10px;
+}
+
+.social-container {
+    justify-content: flex-end;
+}
+.socials {
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.line {
+    height: 1px;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+.footerlogo {
+    width: 300px;
+}
 /*--------------------------------------  RESPONSIVE --------------------------*/
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -460,6 +490,23 @@ img {
     #foundertitle {
         width: 90%;
         font-size: 1.2em;
+    }
+
+    .footerlogo {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .footerlinks {
+        text-align: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .social-container {
+        justify-content: center;
     }
 }
 

@@ -1,6 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js'
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+import { getFirestore, collection, addDoc, getDocs } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,11 +17,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 const colNews = collection(db, 'news');
-const newsList = document.querySelector('#news-list');
+
+let newsdatesorter = []
 
 getDocs(colNews)
     .then((snapshot) => {
@@ -31,28 +30,26 @@ getDocs(colNews)
             news.push({ ...doc.data(), id: doc.id })
         })
 
-        news.forEach((newsarticle) => {
-            renderNews(newsarticle)
+        news.forEach((newsdate) => {
+            var utcSeconds = newsdate.date.seconds;
+            var day = new Date(utcSeconds * 1000);
+            const date = day.getDate() + "/" + day.getMonth() + "/" + day.getFullYear();
+            newsdatesorter.push(date);
         })
     })
-    .catch(err =>{
+    .catch(err => {
         console.log(err.message)
-    } )
+    })
 
-function renderNews(newsarticle){
-    let articlecontainer = document.createElement('li');
-    let title = document.createElement('span');
-    let description = document.createElement('span');
+console.log(newsdatesorter);
 
-    articlecontainer.setAttribute('data.id', newsarticle.id);
-    title.textContent = newsarticle.titulo;
-    description.textContent = newsarticle.description;
+newsdatesorter.sort(function (a, b) {
+    // Convert the date strings to Date objects
+    let dateA = new Date(a);
+    let dateB = new Date(b);
 
-    articlecontainer.appendChild(title);
-    articlecontainer.appendChild(description);
+    // Subtract the dates to get a value that is either negative, positive, or zero
+    return dateA - dateB;
+});
 
-    newsList.appendChild(articlecontainer);
-    
-}
-
-
+console.log(newsdatesorter);

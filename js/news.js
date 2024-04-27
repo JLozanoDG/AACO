@@ -44,6 +44,7 @@ getDocs(newssorter)
 
 
 function renderNews(newsarticle) {
+    let firstdiv = document.createElement('div');
     let articlecontainer = document.createElement('div');
     let title = document.createElement('h3');
     let description = document.createElement('p');
@@ -59,6 +60,12 @@ function renderNews(newsarticle) {
     var day = new Date(utcSeconds * 1000);
     date.textContent = day.getDate() + " / " + day.getMonth() + " / " + day.getFullYear();
     seemorebutton.textContent = "Ver más";
+
+    //añadir el article container a firstdiv y agregar clases de firstdiv
+    firstdiv.appendChild(articlecontainer);
+    firstdiv.classList.add("col-lg-6");
+    firstdiv.classList.add("mt-2");
+
 
     //añade el container y se agregan sus calses
     articlecontainer.classList.add("round-news");
@@ -94,7 +101,7 @@ function renderNews(newsarticle) {
     seemorebutton.classList.add('green-button');
 
     //se añade el articlecontainer al newsList
-    newsList.appendChild(articlecontainer);
+    newsList.appendChild(firstdiv);
 
 
 }

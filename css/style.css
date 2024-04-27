@@ -311,9 +311,6 @@ img {
 }
 /*------------------------------------- PUBLICATIONS ------------------------------*/
 
-.publication-title {
-
-}
 
 .publication-number {
     font-size: 3.5em;
@@ -326,6 +323,12 @@ img {
     text-align: left;
 }
 
+.publication-divisor {
+    height: 150px;
+    width:1px;
+    border-left: 2px solid var(--c-black);
+    padding-right: 15px;
+}
 /*------------------------------------- BENEFITS ------------------------------*/
 
 #benefitscontainer {
@@ -364,6 +367,11 @@ img {
 
 .footerlogo {
     width: 300px;
+}
+
+.publicationimage{
+    width: 100px;
+    height: 100px;
 }
 /*--------------------------------------  RESPONSIVE --------------------------*/
 

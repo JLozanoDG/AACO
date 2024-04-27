@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { getFirestore, collection, addDoc, getDocs, query, orderBy } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,29 +21,36 @@ const db = getFirestore(app);
 
 const colNews = collection(db, 'news');
 const newsList = document.querySelector('#news-list');
+const newssorter = query(colNews, orderBy("date"));
 
-getDocs(colNews)
+getDocs(newssorter)
     .then((snapshot) => {
         let news = []
+        var j = 0;
         snapshot.docs.forEach((doc) => {
             news.push({ ...doc.data(), id: doc.id })
         })
+        
+        const reversed = news.reverse();
 
-        news.forEach((newsarticle) => {
-            renderNews(newsarticle)
-        })
+        for (let i = 0; i < news.length; i++){
+            renderNews(news[i])
+        }
     })
-    .catch(err =>{
+    .catch(err => {
         console.log(err.message)
-    } )
+    })
 
-function renderNews(newsarticle){
+
+
+function renderNews(newsarticle) {
     let articlecontainer = document.createElement('div');
     let title = document.createElement('h3');
     let description = document.createElement('p');
     let date = document.createElement('h5');
     let textcontainer = document.createElement('div');
     let seemorebutton = document.createElement('a');
+    seemorebutton.href = "";
 
     articlecontainer.setAttribute('data.id', newsarticle.id);
     title.textContent = newsarticle.title;
@@ -65,7 +72,7 @@ function renderNews(newsarticle){
     articlecontainer.appendChild(textcontainer);
     textcontainer.classList.add('w-75');
     textcontainer.classList.add('my-auto');
-    
+
     //se añade el titulo principal y se agregan sus clases
     textcontainer.appendChild(title);
     title.classList.add('black-text');
@@ -89,7 +96,7 @@ function renderNews(newsarticle){
     //se añade el articlecontainer al newsList
     newsList.appendChild(articlecontainer);
 
-   
+
 }
 
 

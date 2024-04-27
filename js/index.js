@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { getFirestore, collection, addDoc, getDocs, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,36 +20,86 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const colNews = collection(db, 'news');
+const newsList = document.querySelector('#news-list');
+const newssorter = query(colNews, orderBy("date"));
 
-let newsdatesorter = []
-
-getDocs(colNews)
+getDocs(newssorter)
     .then((snapshot) => {
         let news = []
         snapshot.docs.forEach((doc) => {
             news.push({ ...doc.data(), id: doc.id })
         })
 
-        news.forEach((newsdate) => {
-            var utcSeconds = newsdate.date.seconds;
-            var day = new Date(utcSeconds * 1000);
-            const date = day.getDate() + "/" + day.getMonth() + "/" + day.getFullYear();
-            newsdatesorter.push(date);
-        })
+        const reversed = news.reverse();
+
+        for (let i = 0; i < 4; i++) {
+            renderNews(news[i])
+        }
+
     })
     .catch(err => {
         console.log(err.message)
     })
 
-console.log(newsdatesorter);
 
-newsdatesorter.sort(function (a, b) {
-    // Convert the date strings to Date objects
-    let dateA = new Date(a);
-    let dateB = new Date(b);
+function renderNews(news) {
+    let firstdiv = document.createElement('div');
+    let articlecontainer = document.createElement('div');
+    let title = document.createElement('h3');
+    let description = document.createElement('p');
+    let date = document.createElement('h5');
+    let textcontainer = document.createElement('div');
+    let seemorebutton = document.createElement('a');
+    seemorebutton.href = "";
 
-    // Subtract the dates to get a value that is either negative, positive, or zero
-    return dateA - dateB;
-});
+    var utcSeconds = news.date.seconds;
+    var day = new Date(utcSeconds * 1000);
 
-console.log(newsdatesorter);
+    title.textContent = news.title;
+    description.textContent = news.description;
+    date.textContent = day.getDate() + " / " + day.getMonth() + " / " + day.getFullYear();
+    seemorebutton.textContent = "Ver más";
+
+    //añadir el article container a firstdiv y agregar clases de firstdiv
+    firstdiv.appendChild(articlecontainer);
+    firstdiv.classList.add("col-lg-6");
+    firstdiv.classList.add("mt-2");
+
+    //añade el container y se agregan sus calses
+    articlecontainer.classList.add("round-news");
+    articlecontainer.classList.add("white-box");
+    articlecontainer.classList.add("box-shadow");
+    articlecontainer.classList.add("d-flex");
+    articlecontainer.classList.add("justify-content-center");
+    articlecontainer.classList.add("mt-4");
+
+    //se añade el div que centra los textos y se agregan sus clases
+    articlecontainer.appendChild(textcontainer);
+    textcontainer.classList.add('w-75');
+    textcontainer.classList.add('my-auto');
+
+    //se añade el titulo principal y se agregan sus clases
+    textcontainer.appendChild(title);
+    title.classList.add('black-text');
+    title.classList.add('text-start');
+
+    //se añade la fecha de la noticia y se agregan sus clases
+    textcontainer.appendChild(date);
+    date.classList.add('green-text');
+    date.classList.add('text-start');
+
+    //se añade la descripción de la noticia
+    textcontainer.appendChild(description);
+    description.classList.add('round-box-p');
+    description.classList.add('black-text');
+
+    //se añade el botón de ver más
+    textcontainer.appendChild(seemorebutton);
+    seemorebutton.classList.add('button');
+    seemorebutton.classList.add('green-button');
+
+    //se añade el articlecontainer al newsList
+    newsList.appendChild(firstdiv);
+}
+
+

@@ -48,12 +48,22 @@ img {
     max-width: 100%;
 }
 
+.c-item {
+    height: 100%;
+}
+.c-img {
+    width: 100%;
+}
+
 .round-box {
     border-radius: 20px;
     width: 100%;
     min-height: 50vh;
 }
 
+.vh-50 {
+    height: 60vh;
+  }
 
 .round-border {
     border-radius: 20px;
@@ -441,6 +451,8 @@ img {
         padding-top: 0px;
     }
 
+    
+
     #founderphoto {
         width: 200px;
         height: 200px;
@@ -456,6 +468,11 @@ img {
     .logincontainer {
         padding: 0;
     }
+
+    .vh-50 {
+        height: 50vh;
+    }
+    
     .publication-image {
         width: 50%;
         margin-top: 10px;

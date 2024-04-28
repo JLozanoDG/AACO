@@ -225,6 +225,7 @@ function renderNews(newsarticle) {
     //se añaden clases de modalherodate y se coloca dentro de modalherocontent
     modalnewsdescription.classList.add("black-text");
     modalnewsdescription.classList.add("italic");
+    modalnewsdescription.classList.add("fw-bold");
     modalnewsdescription.textContent = newsarticle.description;
     modalnewscontainer.appendChild(modalnewsdescription);
 

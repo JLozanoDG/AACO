@@ -12,7 +12,7 @@
     --c-soft-green: #73BF8E;
     --c-black: #252525;
     --c-white: #F5F7F2;
-    --f-medium: 500;
+    --f-medium: 600;
     --f-regular: 400;
     --f-bold: 700;
 }
@@ -54,6 +54,10 @@ img {
     min-height: 50vh;
 }
 
+
+.round-border {
+    border-radius: 20px;
+}
 .footer-color {
     background-color: var(--c-sherwood-green);
 }
@@ -335,6 +339,12 @@ img {
     border-left: 2px solid var(--c-black);
     padding-right: 15px;
 }
+
+.divisor-bottom {
+    border-bottom: 2px solid var(--c-black);
+}
+
+
 /*------------------------------------- BENEFITS ------------------------------*/
 
 #benefitscontainer {
@@ -364,7 +374,7 @@ img {
 }
 
 .line {
-    height: 1px;
+    height: 2px;
 }
 
 .copyright {
@@ -404,6 +414,10 @@ img {
 }
 
 .modalnewscontainer {
+    width: 90%;
+}
+
+.info-margin {
     width: 90%;
 }
 

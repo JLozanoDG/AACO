@@ -1,5 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getFirestore, collection, getDocs, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,7 +20,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
+const auth = getAuth();
+const loginform = document.querySelector('#login-form');
 const publications = collection(db, 'publications');
 const publicationsList = document.querySelector('#publications-list');
 const publicationSorter = query(publications, orderBy("date"));
@@ -39,6 +42,21 @@ getDocs(publicationSorter)
         }
 
     })
+
+
+loginform.addEventListener('submit', async e => {
+    e.preventDefault()
+
+    const email = loginform['login-email'].value;
+    const password = loginform['login-password'].value;
+
+    try {
+        const credentials = await signInWithEmailAndPassword(auth, email, password);
+        console.log(credentials);
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 let divcount = 0;
 
@@ -240,7 +258,7 @@ function renderPublications(publication) {
     infodiv.classList.add("d-flex");
     infodiv.classList.add("align-items-center");
     infomargin.appendChild(infodiv);
-    
+
     //se añaden clases de infoelements y se coloca dentro de infomargin
     infoelements.classList.add("row");
     infoelements.classList.add("w-100");
@@ -287,7 +305,7 @@ function renderPublications(publication) {
     //se añade contenido de infodate
     var utcSeconds = publication.date.seconds;
     var day = new Date(utcSeconds * 1000);
-    infodate.textContent = meses[day.getMonth()]  + " " + day.getFullYear();
+    infodate.textContent = meses[day.getMonth()] + " " + day.getFullYear();
     infodatecontainer.appendChild(infodate);
 
     //se añaden clases de infodatecontainer y se coloca dentro de infoelements

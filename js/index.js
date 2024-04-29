@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getFirestore, collection, getDocs, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,10 +19,12 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth();
 
 const colNews = collection(db, 'news');
 const newsList = document.querySelector('#news-list');
 const newssorter = query(colNews, orderBy("date"));
+const loginform = document.querySelector('#login-form');
 let divcount = 0;
 
 getDocs(newssorter)
@@ -41,6 +44,23 @@ getDocs(newssorter)
     .catch(err => {
         console.log(err.message)
     });
+
+
+
+loginform.addEventListener('submit', async e => {
+    e.preventDefault()
+
+    const email = loginform['login-email'].value;
+    const password = loginform['login-password'].value;
+
+    try {
+        const credentials = await signInWithEmailAndPassword(auth, email, password);
+        console.log(credentials);
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 
 function renderNews(newsarticle) {
     let firstdiv = document.createElement('div');
@@ -212,7 +232,7 @@ function renderNews(newsarticle) {
     modalherocontent.appendChild(modalherodate);
     modalherodate.style.fontSize = "18px";
     modalherodate.classList.add("fst-italic");
-    
+
 
     //se añaden clases de modalnewscontainer y se coloca dentro de modalbody
     modalnewscontainer.classList.add("modalnewscontainer");
@@ -232,7 +252,7 @@ function renderNews(newsarticle) {
         newsparagraph.textContent = paragraph;
         newsparagraph.classList.add("mt-4");
         modalnewscontainer.appendChild(newsparagraph);
-     })
+    })
 
     //se añade el modal a la news list
     newsList.appendChild(modalfade);

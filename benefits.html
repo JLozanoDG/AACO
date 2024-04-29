@@ -24,13 +24,12 @@
                     <button class="btn btn-outline-success" type="submit"><i
                             class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
-                <a href="login.html" class="logincontainer"">
-            <div class=" circlebutton d-flex justify-content-center align-items-center">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar"
+                    class="border-0 mx-4 circlebutton d-flex justify-content-center align-items-center">
                     <i class="fa-regular fa-user white-text"></i>
+                </button>
             </div>
-            </a>
         </div>
-    </div>
     </div>
 
     <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
@@ -41,7 +40,7 @@
                 <img src="images/LogoUNAL_2.png" class="logounal">
             </a>
             <div>
-                <button type="button" class="btn nav-login">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar" class="btn nav-login">
                     <div class="circlebutton d-flex justify-content-center align-items-center">
                         <i class="fa-regular fa-user white-text"></i>
                     </div>
@@ -88,6 +87,31 @@
             </div>
         </div>
     </nav>
+
+    <div class="modal fade" id="loginnavbar" tabindex="-1" aria-labelledby="searchbar" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content white-box">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="login-form">
+                        <label for="email">Email:</label>
+                        <input type="email" id="login-email" class="form-control mb-3" placeholder="Correo electrónico"
+                            required>
+                        <label for="email">Contraseña:</label>
+                        <input type="password" id="login-password" class="form-control mb-3" placeholder="Contraseña"
+                            required>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="login-form" class="button green-button">Iniciar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section id="hero" class="d-flex vh-min-100 align-items-center section-padding position-relative">
         <div class="container">
             <div class="row">
@@ -272,6 +296,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/477e1c26e7.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/login.js"></script>
 </body>
 
 </html>

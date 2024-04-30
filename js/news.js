@@ -56,7 +56,12 @@ loginform.addEventListener('submit', async e => {
         const credentials = await signInWithEmailAndPassword(auth, email, password);
         const modal = bootstrap.Modal.getInstance(document.querySelector('#loginnavbar'));
         modal.hide();
+        
         showMessage("Iniciando sesión...", "success");
+        window.setTimeout(function(){
+            window.location.href ="users.html";
+        }, 3000);
+        
     } catch (error) {
         console.log(error);
 

@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getFirestore, collection, getDocs, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import { showMessage } from "./showMessage.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -27,6 +27,14 @@ const newsList = document.querySelector('#news-list');
 const newssorter = query(colNews, orderBy("date"));
 const loginform = document.querySelector('#login-form');
 let divcount = 0;
+
+onAuthStateChanged(auth, (user) => {
+    if(user){
+        window.location.href ="users.html";
+    } else {
+
+    }
+})
 
 getDocs(newssorter)
     .then((snapshot) => {
@@ -59,6 +67,11 @@ loginform.addEventListener('submit', async e => {
         const modal = bootstrap.Modal.getInstance(document.querySelector('#loginnavbar'));
         modal.hide();
         showMessage("Iniciando sesión...", "success");
+
+        window.setTimeout(function(){
+            window.location.href ="users.html";
+        }, 3000);
+
     } catch (error) {
         console.log(error);
 

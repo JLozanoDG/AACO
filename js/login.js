@@ -28,7 +28,13 @@ loginform.addEventListener('submit', async e => {
 
         const modal = bootstrap.Modal.getInstance(document.querySelector('#loginnavbar'));
         modal.hide();
-        
+
+        showMessage("Iniciando sesión...", "success");
+        window.setTimeout(function(){
+            window.location.href ="users.html";
+        }, 2000);
+
+
     } catch (error) {
         console.log(error);
 

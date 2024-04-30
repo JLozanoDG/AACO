@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, query, orderBy } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { showMessage } from "./showMessage.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -53,9 +54,17 @@ loginform.addEventListener('submit', async e => {
 
     try {
         const credentials = await signInWithEmailAndPassword(auth, email, password);
-        console.log(credentials);
+        const modal = bootstrap.Modal.getInstance(document.querySelector('#loginnavbar'));
+        modal.hide();
+        showMessage("Iniciando sesión...", "success");
     } catch (error) {
         console.log(error);
+
+        if(error === "auth/too-many-requests"){
+            showMessage("Demasiados intentos fallidos, cuenta bloqueada temporalmente, intente nuevamente más tarde");
+        }
+        showMessage("credenciales invalidas, intente nuevamente");
+
     }
 })
 

@@ -13,7 +13,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const logout = document.querySelector('#logout')
+const logout = document.querySelector('#logout');
+const logout_phone = document.querySelector('#logoutphone');
 const auth = getAuth();
 
 logout.addEventListener('click', async () => {
@@ -22,6 +23,16 @@ logout.addEventListener('click', async () => {
 
     window.setTimeout(function(){
         window.location.href ="index.html";
-    }, 2000);
+    }, 1000);
+
+})
+
+logout_phone.addEventListener('click', async () => {
+    await signOut(auth);
+    showMessage("Cerrando sesión...", "success");
+
+    window.setTimeout(function(){
+        window.location.href ="index.html";
+    }, 1000);
 
 })

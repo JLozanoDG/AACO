@@ -70,7 +70,7 @@ loginform.addEventListener('submit', async e => {
 
         window.setTimeout(function(){
             window.location.href ="users.html";
-        }, 3000);
+        }, 1000);
 
     } catch (error) {
         console.log(error);

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import { showMessage } from "./showMessage.js";
 
 const firebaseConfig = {
@@ -15,8 +15,22 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const loginform = document.querySelector('#login-form');
+const loginbutton = document.querySelector("#searchbarbutton");
+
+onAuthStateChanged(auth, (user) => {
+    if(user){
+        loginbutton.classList.remove("fa-regular");
+        loginbutton.classList.remove("fa-user");
+        loginbutton.classList.add("fa-solid");
+        loginbutton.classList.add("fa-right-from-bracket");
+        console.log("user registered");
+    } else {
+
+    }
+})
 
 loginform.addEventListener('submit', async e => {
+    
     e.preventDefault()
 
     const email = loginform['login-email'].value;
@@ -32,7 +46,7 @@ loginform.addEventListener('submit', async e => {
         showMessage("Iniciando sesión...", "success");
         window.setTimeout(function(){
             window.location.href ="users.html";
-        }, 2000);
+        }, 1000);
 
 
     } catch (error) {

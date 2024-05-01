@@ -67,6 +67,10 @@ img {
     height: 60vh;
   }
 
+.userbuttons {
+    width: 200px;
+}
+
 .round-border {
     border-radius: 20px;
 }

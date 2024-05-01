@@ -21,13 +21,18 @@
         <img src="images/LogoUNAL_2.png" class="logounal">
       </a>
       <div class="d-flex">
-        <form class="d-flex float-right" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <form class="d-flex float-right mx-1" id="searchform" role="search">
+          <input id="searchinput" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
           <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-        <button type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar"
-          class="border-0 mx-4 circlebutton d-flex justify-content-center align-items-center">
-          <i class="fa-regular fa-user white-text"></i>
+        <a id="contentbutton"
+          class="border-0 mx-1 d-none contentbutton d-flex justify-content-center align-items-center" href="users.html"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Subir contenido">
+          <i class="fa-solid fa-arrow-up-from-bracket white-text mx-3"></i>
+        </a>
+        <button id="sb-buttoncontainer" type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar"
+          class="border-0 circlebutton mx-1 d-flex justify-content-center align-items-center">
+          <i id="searchbarbutton" class="fa-regular fa-user white-text"></i>
         </button>
       </div>
     </div>
@@ -35,15 +40,21 @@
 
   <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid" id="navbarcontainer">
-      <a id="lowerpartbrand" class="navbar-brand" href="#">
+      <a id="lowerpartbrand" class="navbar-brand" href="index.html">
         <img src="images/LogoAACO.png" class="logoaaco">
         <div id="divisor"></div>
         <img src="images/LogoUNAL_2.png" class="logounal">
       </a>
-      <div>
-        <button type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar" class="btn nav-login">
+      <div class="d-flex">
+        <a id="contentbuttonphone"
+          class="border-0 d-none d-lg-none contentbutton d-flex justify-content-center align-items-center"
+          href="users.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Subir contenido">
+          <i class="fa-solid fa-arrow-up-from-bracket white-text mx-3"></i>
+        </a>
+        <button id="nb-buttoncontainer" type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar"
+          class="h-100 border-0 my-auto mx-2 nav-login">
           <div class="circlebutton d-flex justify-content-center align-items-center">
-            <i class="fa-regular fa-user white-text"></i>
+            <i id="navbarbutton" class="fa-regular fa-user white-text"></i>
           </div>
         </button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

@@ -155,6 +155,17 @@ img {
     background-color: var(--c-metalic-green);
     padding: 10px;
     margin: auto;
+    height: 50%;
+}
+
+.contentimg {
+    margin-left:10px;
+    margin-right:1px;
+}
+.contentbutton {
+    border-radius: 10px;
+    background-color: var(--c-metalic-green);
+    padding: 1px;
 }
 
 .nav-button {

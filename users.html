@@ -21,11 +21,15 @@
             </a>
             <div class="d-flex">
                 <form class="d-flex float-right mx-1" id="searchform" role="search">
-                    <input id="searchinput" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <input id="searchinput" class="form-control me-2" type="search" placeholder="Buscar"
+                        aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i
                             class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
-                <a id="contentbutton" class="border-0 mx-1 d-none contentbutton d-flex justify-content-center align-items-center" href="users.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Subir contenido">
+                <a id="contentbutton"
+                    class="border-0 mx-1 d-none contentbutton d-flex justify-content-center align-items-center"
+                    href="users.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    data-bs-title="Subir contenido">
                     <i class="fa-solid fa-arrow-up-from-bracket white-text mx-3"></i>
                 </a>
                 <button id="sb-buttoncontainer" type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar"
@@ -44,10 +48,14 @@
                 <img src="images/LogoUNAL_2.png" class="logounal">
             </a>
             <div class="d-flex">
-                <a id="contentbuttonphone" class="border-0 d-none d-lg-none contentbutton d-flex justify-content-center align-items-center" href="users.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Subir contenido">
+                <a id="contentbuttonphone"
+                    class="border-0 d-none d-lg-none contentbutton d-flex justify-content-center align-items-center"
+                    href="users.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    data-bs-title="Subir contenido">
                     <i class="fa-solid fa-arrow-up-from-bracket white-text mx-3"></i>
                 </a>
-                <button id="nb-buttoncontainer" type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar" class="h-100 border-0 my-auto mx-2 nav-login">
+                <button id="nb-buttoncontainer" type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar"
+                    class="h-100 border-0 my-auto mx-2 nav-login">
                     <div class="circlebutton d-flex justify-content-center align-items-center">
                         <i id="navbarbutton" class="fa-regular fa-user white-text"></i>
                     </div>
@@ -103,18 +111,51 @@
                     <h4 class="fw-medium text-center">¿Que te gustaria hacer hoy?</h4>
                     <div class="d-flex mt-4 align-items-center">
                         <div class="mx-auto mt-4 row d-flex">
-                            <a href=""
-                                class="button mx-auto mt-2 col-lg-6 col-12 green-button text-center userbuttons">Publicar
-                                Noticia</a>
-                            <a href=""
-                                class="button mx-auto mt-2 col-lg-6 col-12 green-button text-center userbuttons">Publicar
-                                Articulo</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalnews"
+                                class="button mx-auto mt-2 col-lg-6 green-button text-center userbuttons">Publicar
+                                Noticia</button>
+                            <button class="button mx-auto mt-2 col-lg-6 green-button text-center userbuttons">Publicar
+                                Articulo</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Modal News -->
+    <div class="modal fade" id="modalnews" tabindex="-1" aria-labelledby="ModalNewsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Publicar noticia</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="publish-news-form">
+                        <label for="title" class="fw-bold">Titulo:</label>
+                        <input type="text" id="news-title" maxlength="120" class="form-control mb-3"
+                            placeholder="Titulo de la noticia" required>
+                        <label for="description" class="fw-bold">Descripción:</label>
+                        <input type="text" id="news-description" class="form-control mb-3"
+                            placeholder="Coloca una pequeña descripción" required>
+                        <label for="news" class="fw-bold">Noticia:</label>
+                        <textarea class="form-control mb-3" id="news-text" rows="3" placeholder="Coloca el texto de la noticia aqui" id="news-body" required></textarea>
+                        <label for="news" class="fw-bold">Imagen de la noticia:</label>
+                        <input type="file" id="news-image" class="form-control mb-3" accept="image/*" required id="Newsimg"/>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary button" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="publish-news-form" class="button green-button">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
     <footer class="footer-color">
         <div class="container">
             <div class="row">
@@ -175,6 +216,7 @@
     <script src="https://kit.fontawesome.com/477e1c26e7.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="module" src="js/login.js"></script>
+    <script type="module" src="js/publishnews.js"></script>
 </body>
 
 </html>

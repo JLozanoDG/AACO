@@ -16,7 +16,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const colNews = collection(db, 'news');
+const colPublications = collection(db, 'publications');
 const newsform = document.querySelector("#publish-news-form");
+const publishform = document.querySelector("#publish-article-form");
 const storage = getStorage();
 
 newsform.addEventListener('submit', async e => {
@@ -53,4 +55,48 @@ newsform.addEventListener('submit', async e => {
     } catch{
         showMessage("Ocurrio un problema, intente nuevamente");
     }
+})
+
+
+publishform.addEventListener('submit', async e => {
+    e.preventDefault()
+
+    const title = publishform['article-title'].value;
+    const authors = publishform['article-authors'].value;
+    const authorsarray = [];
+    authorsarray.push(authors);
+    const language = publishform['article-language'].value;
+    const date = publishform['article-date'].value;
+    const type = publishform['article-type'].value;
+    const url = publishform['article-url'].value;
+    const tags = publishform['article-tags'].value;
+    const tagsarray = [];
+    tagsarray.push(tags);
+    const text = publishform['article-text'].value;
+    const modal = bootstrap.Modal.getInstance(document.querySelector('#modalpublications'));
+
+    showMessage("Cargando...", "success");
+
+    try {
+
+        const newArticle = await addDoc(colPublications, {
+            title: title,
+            author: authorsarray,
+            lang: language,
+            date: date,
+            type: type,
+            link: url,
+            tags: tagsarray,
+            sumarry: text,
+        })
+
+        modal.hide();
+        showMessage("Nuevo articulo publicado", "success");
+
+    } catch {
+        showMessage("Ocurrio un problema, intente nuevamente");
+    }
+
+
+
 })

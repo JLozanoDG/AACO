@@ -114,7 +114,8 @@
                             <button type="button" data-bs-toggle="modal" data-bs-target="#modalnews"
                                 class="button mx-auto mt-2 col-lg-6 green-button text-center userbuttons">Publicar
                                 Noticia</button>
-                            <button class="button mx-auto mt-2 col-lg-6 green-button text-center userbuttons">Publicar
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalpublications"
+                                class="button mx-auto mt-2 col-lg-6 green-button text-center userbuttons">Publicar
                                 Articulo</button>
                         </div>
                     </div>
@@ -141,9 +142,11 @@
                         <input type="text" id="news-description" class="form-control mb-3"
                             placeholder="Coloca una pequeña descripción" required>
                         <label for="news" class="fw-bold">Noticia:</label>
-                        <textarea class="form-control mb-3" id="news-text" rows="3" placeholder="Coloca el texto de la noticia aqui" id="news-body" required></textarea>
+                        <textarea class="form-control mb-3" id="news-text" rows="3"
+                            placeholder="Coloca el texto de la noticia aqui" id="news-body" required></textarea>
                         <label for="news" class="fw-bold">Imagen de la noticia:</label>
-                        <input type="file" id="news-image" class="form-control mb-3" accept="image/*" required id="Newsimg"/>
+                        <input type="file" id="news-image" class="form-control mb-3" accept="image/*" required
+                            id="Newsimg" />
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -153,8 +156,49 @@
             </div>
         </div>
     </div>
-    
 
+    <div class="modal fade" id="modalpublications" tabindex="-1" aria-labelledby="ModalPublicationsLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Publicar articulo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="publish-article-form">
+                        <label for="title" class="fw-bold">Titulo:</label>
+                        <input type="text" id="article-title" maxlength="120" class="form-control mb-3"
+                            placeholder="Titulo de la publicación" required>
+                        <label for="authors" class="fw-bold">Autor(es):</label>
+                        <input type="text" id="article-authors" maxlength="150" class="form-control mb-3"
+                            placeholder="Nombre de Autor(es)" required>
+                        <label for="description" class="fw-bold">Idioma:</label>
+                        <input type="text" id="article-language" class="form-control mb-3"
+                            placeholder="Coloca el idioma de la publicación" required>
+                        <label for="description" class="fw-bold">Fecha de publicación:</label>
+                        <input type="date" id="article-date" class="form-control mb-3" required>
+                        <label for="authors" class="fw-bold">Tipo de publicación:</label>
+                        <input type="text" id="article-type" maxlength="150" class="form-control mb-3"
+                            placeholder="tipo de articulo (revista, libro, articulo, etc.)" required>
+                        <label for="url" class="fw-bold">Link de hermes:</label>
+                        <input type="url" id="article-url" maxlength="120" class="form-control mb-3"
+                            placeholder="Coloca el link que rediriga a la publicación en hermes" required>
+                        <label for="tags" class="fw-bold">Temas:</label>
+                        <input type="text" id="article-tags" class="form-control mb-3"
+                            placeholder="Coloca los temas relacionados a la publicación" required>
+                        <label for="news" class="fw-bold">Abstract:</label>
+                        <textarea class="form-control mb-3" id="article-text" rows="3"
+                            placeholder="Coloca el abstract de la publicación" id="article-body" required></textarea>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary button" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="publish-article-form" class="button green-button">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer-color">
         <div class="container">

@@ -130,7 +130,7 @@ getDocs(newssorter)
 function renderNews(newsarticle) {
     let firstdiv = document.createElement('div');
     let articlecontainer = document.createElement('div');
-    let title = document.createElement('h3');
+    let title = document.createElement('h4');
     let description = document.createElement('p');
     let date = document.createElement('h5');
     let textcontainer = document.createElement('div');
@@ -165,9 +165,11 @@ function renderNews(newsarticle) {
     title.textContent = newsarticle.title;
     title.classList.add("fw-bold");
     title.classList.add("news-title");
+    title.classList.add("mt-4");
     description.textContent = newsarticle.description;
     date.textContent = day.getDate() + " / " + day.getMonth() + " / " + day.getFullYear();
     seemorebutton.textContent = "Ver más";
+    seemorebutton.classList.add("mb-4");
     date.classList.add("fst-italic");
     date.classList.add("fs-6");
     date.style.fontWeight = "var(--f-medium)";

@@ -20,10 +20,6 @@
         <img src="images/LogoUNAL_2.png" class="logounal">
       </a>
       <div class="d-flex">
-        <form class="d-flex float-right mx-1" id="searchform" role="search">
-          <input id="searchinput" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
         <a id="contentbutton"
           class="border-0 mx-1 d-none contentbutton d-flex justify-content-center align-items-center" href="users.html"
           data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Subir contenido">
@@ -88,11 +84,6 @@
               FAQ
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-button" aria-current="page" href="search.html">
-              Búsqueda rápida
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -127,7 +118,7 @@
           <h1 class="display-3 fw-medium" id="herotitle">Entra a la AACO: ¡conviértete en un investigador de la química
             del futuro!</h1>
           <div class="text-center" id="btn-apply-container">
-            <a href="#" class="btn-apply green-button">Aplicar</a>
+            <a href="#contact" class="btn-apply green-button">Aplicar</a>
           </div>
         </div>
       </div>
@@ -144,15 +135,12 @@
         <div class="col-lg-6">
           <div id="aboutdescription"
             class="round-box box-shadow d-flex align-items-center justify-content-center green-box">
-            <div class="w-75 position-relative">
+            <div class="w-75 pt-4 pb-4 position-relative">
               <h2 id="abouttitle" class="text-start round-box-title white-text">Explicación de la AACO</h2>
-              <p class="text-start round-box-p text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nullam
-                porttitor
-                dapibus dapibus. Aenean vulputate, nulla in luctus rhoncus, est purus ultricies
-                leo, eget condimentum metus erat vitae neque. Quisque vulputate, orci quis
-                tristique sodales, ex lorem fringilla felis, ut cursus dolor diam a augue. Curabitur</p>
-              <a class="button green-button" id="aboutusbutton" href="">Presentación</a>
+              <p class="text-start round-box-p text-white">El grupo de Investigación de Aplicaciones Analíticas de Compuestos Orgánicos del Departamento
+                 de Química de la Universidad Nacional de Colombia-Sede Bogotá, se conformó en el año 2014 bajo la dirección de Mauricio Maldonado, 
+                 quien actualmente sigue al frente de las labores académico-administrativas de AACO. <br><br> Desde el inicio de su creación, el grupo de Investigación ha trabajado 
+                 en las líneas de investigación en síntesis química y la línea de aplicaciones analíticas </p>
             </div>
           </div>
         </div>
@@ -160,12 +148,65 @@
           <div class="round-box d-flex box-shadow align-items-center justify-content-center white-box">
             <div class="w-75">
               <h2 class="text-start round-box-title black-text">Galeria</h2>
-              <a class="circlebutton"><i class="fa-solid fa-up-right-from-square white-text"></i></a>
+              <button type="button" data-bs-toggle="modal" data-bs-target="#modalGallery" class="circlebutton border-0">
+                <i class="fa-solid fa-up-right-from-square white-text"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
   </section>
+
+  <div class="modal fade" id="modalGallery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Galeria</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselExampleDark" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active c-item" data-bs-interval="10000">
+                <img src="images/evento_multicultural_2.png" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item c-item" data-bs-interval="2000">
+                <img src="images/evento-multicultural-1.png" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img src="images/evento_multicultural_3.png" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section id="category" class="vh-min-100 section-padding d-flex align-items-center">
     <div class="container">
@@ -173,18 +214,16 @@
         <div class="col-lg-6">
           <div class="round-box box-shadow d-flex align-items-center justify-content-center green-box">
             <div class="w-75 position-relative">
-              <h2 class="text-start round-box-title white-text">Categoria</h2>
-              <p class="text-start round-box-p text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nullam
-                porttitor
-                dapibus dapibus. Aenean vulputate, nulla in luctus rhoncus, est purus ultricies
-                leo, eget condimentum metus erat vitae neque. Quisque vulputate, orci quis
-                tristique sodales, ex lorem fringilla felis, ut cursus dolor diam a augue. Curabitur</p>
+              <h2 class="text-start round-box-title white-text">Categoria de la AACO</h2>
+              <p class="text-start round-box-p text-white">El grupo AACO, gracias al esfuerzo de los estudiantes de pregrado
+                 y de posgrado que se han vinculado desde su creación, ha permitido consolidar al grupo como A de acuerdo a
+                la clasificación de MINCIENCIAS. </p>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="round-box box-shadow d-flex align-items-center justify-content-center white-box">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F6N_goMVd8s?si=dQZm1m48lxVRbkLC&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -203,10 +242,6 @@
       </div>
   </section>
 
-  <!-- Button trigger modal -->
-
-  </div>
-
   <section id="founder" class="vh-min-100 section-padding d-flex align-items-center">
     <div class="container">
       <div class="row">
@@ -224,12 +259,9 @@
                 la Universidad Nacional</h4>
             </div>
             <div class="col-12 col-lg-4 d-flex">
-              <p class="round-box-p text-white text-center mx-auto my-auto w-75">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Nullam porttitor dapibus dapibus. Aenean vulputate,
-                nulla in luctus rhoncus, est purus ultricies leo, eget condimentum
-                metus erat vitae neque. Quisque vulputate, orci quis tristique
-                sodales, ex lorem fringilla felis, ut cursus dolor diam a augue.
-                Curabitur</p>
+              <p class="round-box-p text-white text-center mx-auto my-auto w-75"> Líder del grupo de investigación AACO, es químico egresado de la Universidad Nacional de Colombia 
+                en el año de 1999. Su titulo de Doctor en Ciencias química específicamente en el área de síntesis orgánica y logro su titulación en el año 2006.
+                 Es profesor del área de química analítica de la Universidad Nacional de Colombia desde el año 2008 hasta la fecha. </p>
             </div>
           </div>
         </div>
@@ -282,7 +314,7 @@
           <img class="col-6 col-lg-3" src="images/Alcala.png" alt="">
           <img class="col-6 col-lg-3" src="images/ManuelaBeltran.png" alt="">
           <img class="col-6 col-lg-3" src="images/LogoCol.png" alt="">
-          <img class="col-6 col-lg-3" src="images/Alcala.png" alt="">
+          <img class="col-6 col-lg-3" src="images/LogoUNAL_2.png" alt="">
         </div>
       </div>
     </div>
@@ -299,7 +331,7 @@
               <div class="w-75">
                 <h2 id="benefitstitle" class="text-start round-box-title white-text">Principales beneficios <br> para
                   investigar con la AACO</h2>
-                <a class="circlebutton mt-2"><i class="fa-solid fa-up-right-from-square white-text"></i></a>
+                <a href="benefits.html" class="circlebutton mt-2"><i class="fa-solid fa-up-right-from-square white-text"></i></a>
               </div>
             </div>
           </div>
@@ -319,17 +351,17 @@
                 <div class="col-12 p-2 text-center round-corners black-text">
                   <i class="fa-solid mx-auto fa-envelope"></i>
                   <h6 class="text-center mx-auto">Correo</h6>
-                  <p>xxxxxx@hotmail.com</p>
+                  <a class="green-text fw-medium" href="mailto:mmaldonadov@unal.edu.co">mmaldonadov@unal.edu.co</a>
                 </div>
                 <div class="col-12 p-2 text-center round-corners black-text">
                   <i class="fa-solid fa-phone"></i>
                   <h6 class="text-center mx-auto">Celular</h6>
-                  <p>xxx-xxxx-xxx</p>
+                  <a class="green-text fw-medium" href="https://api.whatsapp.com/send/?phone=573007446831&text&type=phone_number&app_absent=0" target="_blaknk">300-7446-831</a>
                 </div>
                 <div class="col-12 p-2 text-center round-corners black-text">
                   <i class="fa-brands fa-square-instagram"></i>
                   <h6 class="text-center mx-auto">Instagram</h6>
-                  <p>@xxxxxxxxxxx</p>
+                  <a href="https://www.instagram.com/grupo_aaco_unal/" class="green-text fw-medium" target="_blank">@grupo_aaco_unal</a>
                 </div>
               </div>
             </div>
@@ -373,9 +405,15 @@
         <div class="col-12 d-flex social-container mt-4 white-text">
           <div class="d-flex">
             <h6 id="followus">Siguenos</h6>
-            <i class="fa-brands fa-square-instagram socials"></i>
-            <i class="fa-brands fa-spotify socials"></i>
-            <i class="fa-brands fa-youtube socials"></i>
+            <a class="white-text" href="https://www.instagram.com/grupo_aaco_unal/" target="_blank">
+              <i class="fa-brands fa-square-instagram socials"></i>
+            </a>
+            <a>
+              <i class="fa-brands fa-spotify socials"></i>
+            </a>
+            <a class="white-text" href="https://www.youtube.com/@Acco1235" target="_blank">
+              <i class="fa-brands fa-youtube socials"></i>
+            </a>
           </div>
         </div>
         <div class="col-12 mt-2">

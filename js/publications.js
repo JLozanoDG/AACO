@@ -162,6 +162,7 @@ function renderPublications(publication) {
     publicationtitle.classList.add("black-text");
     publicationtitle.classList.add("text-start");
     publicationtitle.classList.add("publication-title");
+    publicationtitle.classList.add("mt-4");
     publicationcontent.appendChild(publicationtitle);
 
     //añadir clases a publicationautors y colocarlo en publicationcontent
@@ -179,6 +180,7 @@ function renderPublications(publication) {
     //añadir clases a publicationnitton y colocarlo en publicationcontent
     publicationbutton.classList.add("green-button");
     publicationbutton.classList.add("button");
+    publicationbutton.classList.add("mb-4");
     publicationcontent.appendChild(publicationbutton);
     publicationbutton.setAttribute("data-bs-toggle", "modal");
     publicationbutton.setAttribute("type", "button");

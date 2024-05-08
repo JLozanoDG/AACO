@@ -131,6 +131,7 @@ function renderNews(newsarticle) {
     let firstdiv = document.createElement('div');
     let articlecontainer = document.createElement('div');
     let title = document.createElement('h4');
+    let imagecontainer = document.createElement('div');
     let description = document.createElement('p');
     let date = document.createElement('h5');
     let textcontainer = document.createElement('div');
@@ -176,6 +177,9 @@ function renderNews(newsarticle) {
     date.classList.add("news-date");
     description.classList.add("news-description");
 
+    
+
+
     //añadir el article container a firstdiv y agregar clases de firstdiv
     firstdiv.appendChild(articlecontainer);
     firstdiv.classList.add("col-lg-6");
@@ -189,6 +193,15 @@ function renderNews(newsarticle) {
     articlecontainer.classList.add("d-flex");
     articlecontainer.classList.add("justify-content-center");
     articlecontainer.classList.add("mt-4");
+    articlecontainer.classList.add("overflow-hidden");
+
+    //añadir el imagecontainer al articlecontainer agregar clases de imagecontainer
+    imagecontainer.classList.add("image-news-container");
+    imagecontainer.classList.add("w-100");
+    imagecontainer.classList.add("mt-4");
+    imagecontainer.style.backgroundImage = `url(${newsarticle.image})`;
+    textcontainer.appendChild(imagecontainer);
+
 
     //se añade el div que centra los textos y se agregan sus clases
     articlecontainer.appendChild(textcontainer);

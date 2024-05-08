@@ -9,9 +9,12 @@ document.addEventListener('keyup', e => {
             const newstitle = news.querySelector(".news-title").textContent;
             const newsdescription = news.querySelector(".news-description").textContent;
 
-            newstitle.toLowerCase().includes(e.target.value.toLowerCase())
-            ?news.classList.remove("filtro")
-            :news.classList.add("filtro");
+
+            if(newstitle.toLowerCase().includes(e.target.value.toLowerCase()) || newsdescription.toLowerCase().includes(e.target.value.toLowerCase())){
+                news.classList.remove("filtro");
+            }else {
+                news.classList.add("filtro");
+            }
 
             /*newsdescription.toLowerCase().includes(e.target.value.toLowerCase())
             ?news.classList.remove("filtro")

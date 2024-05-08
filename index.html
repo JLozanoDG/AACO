@@ -9,6 +9,15 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "4nc70VqMm3wqKgLvY",
+      });
+    })();
+  </script>
 </head>
 
 <body>
@@ -60,6 +69,11 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0">
           <li class="nav-item">
+            <a class="nav-link nav-button nav-active" aria-current="page" href="index.html">
+              Inicio
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link nav-button" aria-current="page" href="about.html">
               ¿Quienes somos?
             </a>
@@ -88,6 +102,7 @@
       </div>
     </div>
   </nav>
+
 
   <div class="modal fade" id="loginnavbar" tabindex="-1" aria-labelledby="searchbar" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -137,10 +152,13 @@
             class="round-box box-shadow d-flex align-items-center justify-content-center green-box">
             <div class="w-75 pt-4 pb-4 position-relative">
               <h2 id="abouttitle" class="text-start round-box-title white-text">Explicación de la AACO</h2>
-              <p class="text-start round-box-p text-white">El grupo de Investigación de Aplicaciones Analíticas de Compuestos Orgánicos del Departamento
-                 de Química de la Universidad Nacional de Colombia-Sede Bogotá, se conformó en el año 2014 bajo la dirección de Mauricio Maldonado, 
-                 quien actualmente sigue al frente de las labores académico-administrativas de AACO. <br><br> Desde el inicio de su creación, el grupo de Investigación ha trabajado 
-                 en las líneas de investigación en síntesis química y la línea de aplicaciones analíticas </p>
+              <p class="text-start round-box-p text-white">El grupo de Investigación de Aplicaciones Analíticas de
+                Compuestos Orgánicos del Departamento
+                de Química de la Universidad Nacional de Colombia-Sede Bogotá, se conformó en el año 2014 bajo la
+                dirección de Mauricio Maldonado,
+                quien actualmente sigue al frente de las labores académico-administrativas de AACO. <br><br> Desde el
+                inicio de su creación, el grupo de Investigación ha trabajado
+                en las líneas de investigación en síntesis química y la línea de aplicaciones analíticas </p>
             </div>
           </div>
         </div>
@@ -149,7 +167,9 @@
             <div class="w-75">
               <h2 class="text-start round-box-title black-text">Galeria</h2>
               <button type="button" data-bs-toggle="modal" data-bs-target="#modalGallery" class="circlebutton border-0">
-                <i class="fa-solid fa-up-right-from-square white-text"></i>
+                <div class="d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-up-right-from-square white-text my-auto"></i>
+                </div>
               </button>
             </div>
           </div>
@@ -167,9 +187,12 @@
         <div class="modal-body">
           <div id="carouselExampleDark" class="carousel slide">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active c-item" data-bs-interval="10000">
@@ -194,11 +217,13 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+              data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -215,15 +240,21 @@
           <div class="round-box box-shadow d-flex align-items-center justify-content-center green-box">
             <div class="w-75 position-relative">
               <h2 class="text-start round-box-title white-text">Categoria de la AACO</h2>
-              <p class="text-start round-box-p text-white">El grupo AACO, gracias al esfuerzo de los estudiantes de pregrado
-                 y de posgrado que se han vinculado desde su creación, ha permitido consolidar al grupo como A de acuerdo a
+              <p class="text-start round-box-p text-white">El grupo AACO, gracias al esfuerzo de los estudiantes de
+                pregrado
+                y de posgrado que se han vinculado desde su creación, ha permitido consolidar al grupo como A de acuerdo
+                a
                 la clasificación de MINCIENCIAS. </p>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="round-box box-shadow d-flex align-items-center justify-content-center white-box">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F6N_goMVd8s?si=dQZm1m48lxVRbkLC&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315"
+              src="https://www.youtube-nocookie.com/embed/F6N_goMVd8s?si=dQZm1m48lxVRbkLC&amp;start=1"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -235,7 +266,7 @@
       <div class="row pb-4">
         <h2 class="text-lg-start text-center col-12 col-lg-6">Noticias y eventos</h2>
         <div class="col-12 col-lg-6 position-relative mb-4">
-          <a class="button green-button" id="newsbutton" href="">Ver repositorio</a>
+          <a class="button green-button" id="newsbutton" href="news.html">Ver repositorio</a>
         </div>
       </div>
       <div id="news-list" class="row">
@@ -259,9 +290,12 @@
                 la Universidad Nacional</h4>
             </div>
             <div class="col-12 col-lg-4 d-flex">
-              <p class="round-box-p text-white text-center mx-auto my-auto w-75"> Líder del grupo de investigación AACO, es químico egresado de la Universidad Nacional de Colombia 
-                en el año de 1999. Su titulo de Doctor en Ciencias química específicamente en el área de síntesis orgánica y logro su titulación en el año 2006.
-                 Es profesor del área de química analítica de la Universidad Nacional de Colombia desde el año 2008 hasta la fecha. </p>
+              <p class="round-box-p text-white text-center mx-auto my-auto w-75"> Líder del grupo de investigación AACO,
+                es químico egresado de la Universidad Nacional de Colombia
+                en el año de 1999. Su titulo de Doctor en Ciencias química específicamente en el área de síntesis
+                orgánica y logro su titulación en el año 2006.
+                Es profesor del área de química analítica de la Universidad Nacional de Colombia desde el año 2008 hasta
+                la fecha. </p>
             </div>
           </div>
         </div>
@@ -331,7 +365,8 @@
               <div class="w-75">
                 <h2 id="benefitstitle" class="text-start round-box-title white-text">Principales beneficios <br> para
                   investigar con la AACO</h2>
-                <a href="benefits.html" class="circlebutton mt-2"><i class="fa-solid fa-up-right-from-square white-text"></i></a>
+                <a href="benefits.html" class="circlebutton mt-2"><i
+                    class="fa-solid fa-up-right-from-square white-text"></i></a>
               </div>
             </div>
           </div>
@@ -356,12 +391,15 @@
                 <div class="col-12 p-2 text-center round-corners black-text">
                   <i class="fa-solid fa-phone"></i>
                   <h6 class="text-center mx-auto">Celular</h6>
-                  <a class="green-text fw-medium" href="https://api.whatsapp.com/send/?phone=573007446831&text&type=phone_number&app_absent=0" target="_blaknk">300-7446-831</a>
+                  <a class="green-text fw-medium"
+                    href="https://api.whatsapp.com/send/?phone=573007446831&text&type=phone_number&app_absent=0"
+                    target="_blaknk">300-7446-831</a>
                 </div>
                 <div class="col-12 p-2 text-center round-corners black-text">
                   <i class="fa-brands fa-square-instagram"></i>
                   <h6 class="text-center mx-auto">Instagram</h6>
-                  <a href="https://www.instagram.com/grupo_aaco_unal/" class="green-text fw-medium" target="_blank">@grupo_aaco_unal</a>
+                  <a href="https://www.instagram.com/grupo_aaco_unal/" class="green-text fw-medium"
+                    target="_blank">@grupo_aaco_unal</a>
                 </div>
               </div>
             </div>
@@ -369,27 +407,29 @@
           <div class="col-lg-8">
             <div class="p-4 d-flex box-shadow align-items-center justify-content-center white-box round-corners">
               <div class="w-75">
-                <form action="#" class="row g-3">
+                <form id="contactform" action="#" class="row g-3">
                   <div class="">
                     <h3 class="black-text">Escribenos</h3>
                   </div>
                   <div class="form-group col-lg-6">
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input id="form-name" type="text" class="form-control" placeholder="Nombre" required>
                   </div>
                   <div class="form-group col-lg-6">
-                    <input type="text" class="form-control" placeholder="Apellidos">
+                    <input id="form-lastname" type="text" class="form-control" placeholder="Apellidos" required>
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Correo">
+                    <input id="form-mail" type="email" class="form-control" placeholder="Correo" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Asunto">
+                    <input id="form-subject" type="text" class="form-control" placeholder="Asunto" required>
                   </div>
                   <div class="form-group">
-                    <textarea name="message" rows="5" class="form-control" placeholder="Mensaje"></textarea>
+                    <textarea id="form-message" name="message" rows="5" class="form-control"
+                      placeholder="Mensaje"></textarea>
                   </div>
                   <div class="form-group d-flex align-items-center"></div>
-                  <a class="button green-button text-center mx-auto" href="">Enviar</a>
+                  <button type="submit" onclick="return sendMail()"
+                    class="button green-button text-center border-0 mx-auto">Enviar</button>
                 </form>
               </div>
             </div>
@@ -464,6 +504,8 @@
   <script src="https://kit.fontawesome.com/477e1c26e7.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script type="module" src="js/index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
 </body>
 
 </html>

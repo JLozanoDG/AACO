@@ -36,59 +36,66 @@
 
   <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid" id="navbarcontainer">
-      <a id="lowerpartbrand" class="navbar-brand" href="index.html">
-        <img src="images/LogoAACO.png" class="logoaaco">
-        <div id="divisor"></div>
-        <img src="images/LogoUNAL_2.png" class="logounal">
-      </a>
-      <div class="d-flex">
-        <a id="contentbuttonphone"
-          class="border-0 d-none d-lg-none contentbutton d-flex justify-content-center align-items-center"
-          href="users.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Subir contenido">
-          <i class="fa-solid fa-arrow-up-from-bracket white-text mx-3"></i>
+        <a id="lowerpartbrand" class="navbar-brand" href="index.html">
+            <img src="images/LogoAACO.png" class="logoaaco">
+            <div id="divisor"></div>
+            <img src="images/LogoUNAL_2.png" class="logounal">
         </a>
-        <button id="nb-buttoncontainer" type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar"
-          class="h-100 border-0 my-auto mx-2 nav-login">
-          <div class="circlebutton d-flex justify-content-center align-items-center">
-            <i id="navbarbutton" class="fa-regular fa-user white-text"></i>
-          </div>
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-        <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link nav-button" aria-current="page" href="about.html">
-              ¿Quienes somos?
+        <div class="d-flex">
+            <a id="contentbuttonphone"
+                class="border-0 d-none d-lg-none contentbutton d-flex justify-content-center align-items-center"
+                href="users.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                data-bs-title="Subir contenido">
+                <i class="fa-solid fa-arrow-up-from-bracket white-text mx-3"></i>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-button" aria-current="page" href="news.html">
-              Noticias y eventos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-button" aria-current="page" href="publications.html">
-              Nuestras publicaciones
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-button" aria-current="page" href="benefits.html">
-              Beneficios de la AACO
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-button" aria-current="page" href="faq.html">
-              FAQ
-            </a>
-          </li>
-        </ul>
-      </div>
+            <button id="nb-buttoncontainer" type="button" data-bs-toggle="modal" data-bs-target="#loginnavbar"
+                class="h-100 border-0 my-auto mx-2 nav-login">
+                <div class="circlebutton d-flex justify-content-center align-items-center">
+                    <i id="navbarbutton" class="fa-regular fa-user white-text"></i>
+                </div>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link nav-button" aria-current="page" href="index.html">
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-button" aria-current="page" href="about.html">
+                        ¿Quienes somos?
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-button" aria-current="page" href="news.html">
+                        Noticias y eventos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-button nav-active" aria-current="page" href="publications.html">
+                        Nuestras publicaciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-button" aria-current="page" href="benefits.html">
+                        Beneficios de la AACO
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-button" aria-current="page" href="faq.html">
+                        FAQ
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
   <div class="modal fade" id="loginnavbar" tabindex="-1" aria-labelledby="searchbar" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -132,7 +139,6 @@
     <div class="container">
       <form id="publicationsearchbar" class="d-flex" action="">
         <input id="pubsearchinput" class="form-control me-2" type="search" placeholder="Ingrese un término de búsqueda">
-        <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </div>
   </section>

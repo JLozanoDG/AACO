@@ -142,6 +142,7 @@ function renderPublications(publication) {
 
     //añadir clase a firstdiv
     firstdiv.classList.add("col-12");
+    firstdiv.classList.add("publications");
 
     //añadir clases a publicationcontainer y colocarlo en el firstdiv
     publicationcontainer.classList.add("round-news");

@@ -180,6 +180,7 @@ function renderNews(newsarticle) {
     firstdiv.appendChild(articlecontainer);
     firstdiv.classList.add("col-lg-6");
     firstdiv.classList.add("mt-2");
+    firstdiv.classList.add("news");
 
     //añade el container y se agregan sus calses
     articlecontainer.classList.add("round-news");

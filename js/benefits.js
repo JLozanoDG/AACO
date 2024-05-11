@@ -11,3 +11,27 @@ function resize() {
         console.log("resized");
     }
 }
+
+const form = document.querySelector("#contactform");
+
+form.addEventListener('submit', handleSubmit)
+
+async function handleSubmit(event) {
+    showMessage("Enviando mensaje...", "success")
+    event.preventDefault()
+    const formData = new FormData(form);
+    const response = await fetch(form.action,{
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+
+    if(response.ok){
+        showMessage("Mensaje enviado correctamente", "success")
+        form.reset()
+    } else {
+        showMessage("Error: Mensaje no enviado, intente nuevamente")
+    }
+}

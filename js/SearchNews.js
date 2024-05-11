@@ -6,9 +6,8 @@ document.addEventListener('keyup', e => {
 
         document.querySelectorAll(".news").forEach(news => {
 
-            const newstitle = news.querySelector(".news-title").textContent;
-            const newsdescription = news.querySelector(".news-description").textContent;
-
+            const newstitle = news.querySelector(".news-title").textContent.normalize('NFD').replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi,"$1$2").normalize();
+            const newsdescription = news.querySelector(".news-description").textContent.normalize('NFD').replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi,"$1$2").normalize();
 
             if(newstitle.toLowerCase().includes(e.target.value.toLowerCase()) || newsdescription.toLowerCase().includes(e.target.value.toLowerCase())){
                 news.classList.remove("filtro");

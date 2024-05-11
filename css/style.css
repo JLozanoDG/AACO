@@ -321,6 +321,13 @@ img {
     background-color: var(--c-white);
 }
 
+.aboutimg {
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 
 /*------------------------------------- NEWS ------------------------------*/
 #newsbutton {
@@ -443,6 +450,11 @@ img {
 
 .publication-tags{
     font-weight: var(--f-medium);
+}
+
+
+.mail {
+    font-size: 0.75rem;
 }
 /*--------------------------------------  MODALS --------------------------*/
 

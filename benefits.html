@@ -209,67 +209,66 @@
 
     <section id="contact" class="vh-min-100 section-padding d-flex align-items-center">
         <div class="container">
-            <div class="row">
-                <h2 class="text-lg-start text-center col-12">Contactanos</h2>
-                <div class="row g-3 mt-4 mx-auto">
-                    <div class="col-lg-4 mx-auto">
-                        <div
-                            class="round-box mx-auto d-flex box-shadow align-items-center justify-content-center white-box">
-                            <div class="w-75">
-                                <div class="col-12 p-2 text-center round-corners black-text">
-                                    <i class="fa-solid mx-auto fa-envelope"></i>
-                                    <h6 class="text-center mx-auto">Correo</h6>
-                                    <a class="green-text fw-medium"
-                                        href="mailto:mmaldonadov@unal.edu.co">mmaldonadov@unal.edu.co</a>
-                                </div>
-                                <div class="col-12 p-2 text-center round-corners black-text">
-                                    <i class="fa-solid fa-phone"></i>
-                                    <h6 class="text-center mx-auto">Celular</h6>
-                                    <a class="green-text fw-medium"
-                                        href="https://api.whatsapp.com/send/?phone=573007446831&text&type=phone_number&app_absent=0"
-                                        target="_blaknk">300-7446-831</a>
-                                </div>
-                                <div class="col-12 p-2 text-center round-corners black-text">
-                                    <i class="fa-brands fa-square-instagram"></i>
-                                    <h6 class="text-center mx-auto">Instagram</h6>
-                                    <a href="https://www.instagram.com/grupo_aaco_unal/" class="green-text fw-medium"
-                                        target="_blank">@grupo_aaco_unal</a>
-                                </div>
-                            </div>
-                        </div>
+          <div class="row">
+            <h2 class="text-lg-start text-center col-12">Contactanos</h2>
+            <div class="row g-3 mt-4 mx-auto">
+              <div class="col-lg-4 mx-auto">
+                <div class="round-box mx-auto d-flex box-shadow align-items-center justify-content-center white-box">
+                  <div class="w-75">
+                    <div class="col-12 p-2 text-center round-corners black-text">
+                      <i class="fa-solid mx-auto fa-envelope"></i>
+                      <h6 class="text-center mx-auto">Correo</h6>
+                      <a class="green-text fw-medium" href="mailto:mmaldonadov@unal.edu.co">mmaldonadov@unal.edu.co</a>
+                      
                     </div>
-                    <div class="col-lg-8">
-                        <div
-                            class="p-4 d-flex box-shadow align-items-center justify-content-center white-box round-corners">
-                            <div class="w-75">
-                                <form action="#" class="row g-3">
-                                    <div class="">
-                                        <h3 class="black-text">Escribenos</h3>
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <input type="text" class="form-control" placeholder="Nombre">
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <input type="text" class="form-control" placeholder="Apellidos">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Correo">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Asunto">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea name="message" rows="5" class="form-control"
-                                            placeholder="Mensaje"></textarea>
-                                    </div>
-                                    <div class="form-group d-flex align-items-center"></div>
-                                    <a class="button green-button text-center mx-auto" href="">Enviar</a>
-                                </form>
-                            </div>
-                        </div>
+                    <div class="col-12 p-2 text-center round-corners black-text">
+                      <i class="fa-solid fa-phone"></i>
+                      <h6 class="text-center mx-auto">Celular</h6>
+                      <a class="green-text fw-medium"
+                        href="https://api.whatsapp.com/send/?phone=573007446831&text&type=phone_number&app_absent=0"
+                        target="_blaknk">300-7446-831</a>
+                        
                     </div>
+                    <div class="col-12 p-2 text-center round-corners black-text">
+                      <i class="fa-brands fa-square-instagram"></i>
+                      <h6 class="text-center mx-auto">Instagram</h6>
+                      <a href="https://www.instagram.com/grupo_aaco_unal/" class="green-text fw-medium"
+                        target="_blank">@grupo_aaco_unal</a>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="p-4 d-flex box-shadow align-items-center justify-content-center white-box round-corners">
+                  <div class="w-75">
+                    <form id="contactform" action="https://formspree.io/f/mayrkekn" method="POST" class="row g-3">
+                      <div class="">
+                        <h3 class="black-text">Escribenos</h3>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <input name="Nombre" id="form-name" type="text" class="form-control" placeholder="Nombre" required>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <input name="Apellido" id="form-lastname" type="text" class="form-control" placeholder="Apellidos" required>
+                      </div>
+                      <div class="form-group">
+                        <input name="Correo" id="form-mail" type="email" class="form-control" placeholder="Correo" required>
+                      </div>
+                      <div class="form-group">
+                        <input name="subject" id="form-subject" type="text" class="form-control" placeholder="Asunto" required>
+                      </div>
+                      <div class="form-group">
+                        <textarea name="Mensaje" id="form-message" name="message" rows="5" class="form-control"
+                          placeholder="Mensaje"></textarea>
+                      </div>
+                      <div class="form-group d-flex align-items-center"></div>
+                      <button type="submit" class="button green-button text-center border-0 mx-auto">Enviar</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
     </section>
 

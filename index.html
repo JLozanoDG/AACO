@@ -9,15 +9,6 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init({
-        publicKey: "4nc70VqMm3wqKgLvY",
-      });
-    })();
-  </script>
 </head>
 
 <body>
@@ -197,24 +188,13 @@
             <div class="carousel-inner">
               <div class="carousel-item active c-item" data-bs-interval="10000">
                 <img src="images/evento_multicultural_2.png" class="d-block w-100 c-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
+
               </div>
               <div class="carousel-item c-item" data-bs-interval="2000">
                 <img src="images/evento-multicultural-1.png" class="d-block w-100 c-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
               </div>
               <div class="carousel-item c-item">
                 <img src="images/evento_multicultural_3.png" class="d-block w-100 c-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
@@ -387,6 +367,7 @@
                   <i class="fa-solid mx-auto fa-envelope"></i>
                   <h6 class="text-center mx-auto">Correo</h6>
                   <a class="green-text fw-medium" href="mailto:mmaldonadov@unal.edu.co">mmaldonadov@unal.edu.co</a>
+                  
                 </div>
                 <div class="col-12 p-2 text-center round-corners black-text">
                   <i class="fa-solid fa-phone"></i>
@@ -394,6 +375,7 @@
                   <a class="green-text fw-medium"
                     href="https://api.whatsapp.com/send/?phone=573007446831&text&type=phone_number&app_absent=0"
                     target="_blaknk">300-7446-831</a>
+                    
                 </div>
                 <div class="col-12 p-2 text-center round-corners black-text">
                   <i class="fa-brands fa-square-instagram"></i>
@@ -407,29 +389,28 @@
           <div class="col-lg-8">
             <div class="p-4 d-flex box-shadow align-items-center justify-content-center white-box round-corners">
               <div class="w-75">
-                <form id="contactform" action="#" class="row g-3">
+                <form id="contactform" action="https://formspree.io/f/mayrkekn" method="POST" class="row g-3">
                   <div class="">
                     <h3 class="black-text">Escribenos</h3>
                   </div>
                   <div class="form-group col-lg-6">
-                    <input id="form-name" type="text" class="form-control" placeholder="Nombre" required>
+                    <input name="Nombre" id="form-name" type="text" class="form-control" placeholder="Nombre" required>
                   </div>
                   <div class="form-group col-lg-6">
-                    <input id="form-lastname" type="text" class="form-control" placeholder="Apellidos" required>
+                    <input name="Apellido" id="form-lastname" type="text" class="form-control" placeholder="Apellidos" required>
                   </div>
                   <div class="form-group">
-                    <input id="form-mail" type="email" class="form-control" placeholder="Correo" required>
+                    <input name="Correo" id="form-mail" type="email" class="form-control" placeholder="Correo" required>
                   </div>
                   <div class="form-group">
-                    <input id="form-subject" type="text" class="form-control" placeholder="Asunto" required>
+                    <input name="subject" id="form-subject" type="text" class="form-control" placeholder="Asunto" required>
                   </div>
                   <div class="form-group">
-                    <textarea id="form-message" name="message" rows="5" class="form-control"
+                    <textarea name="Mensaje" id="form-message" name="message" rows="5" class="form-control"
                       placeholder="Mensaje"></textarea>
                   </div>
                   <div class="form-group d-flex align-items-center"></div>
-                  <button type="submit" onclick="return sendMail()"
-                    class="button green-button text-center border-0 mx-auto">Enviar</button>
+                  <button type="submit" class="button green-button text-center border-0 mx-auto">Enviar</button>
                 </form>
               </div>
             </div>
